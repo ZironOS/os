@@ -1,0 +1,62 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+name: kde-atomic
+description: KDE Atomic Edition of ZironOS
+
+base-image: quay.io/fedora-ostree-desktops/kinoite 
+image-version: 41
+
+modules:
+  - type: files
+    files:
+      - source: system
+        destination: /
+
+  - type: rpm-ostree
+    repos:
+      - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+    install:
+      - tailscale
+      - starship
+      - neovim
+      - autojump
+      - elvish
+      - libvirt
+      - podman-compose
+      - ripgrep
+      - fastfetch
+      - gh
+      - sd
+      - bat
+      - eza
+      - procs
+      - tealdeer
+      - btop
+      - zoxide
+      - tokei
+      - pleaser
+      - alacritty
+    remove:
+      - firefox
+      - firefox-langpacks
+      - kwrite
+
+  - type: default-flatpaks
+    notify: true
+    user: 
+      install: 
+        - one.ablaze.floorp
+        - io.mpv.Mpv
+        - org.kde.haruna
+        - org.kde.okular
+        - org.kde.gwenview
+        - it.mijorus.gearlever
+        - net.mullvad.MullvadBrowser
+        - org.kde.kwrite
+  - type: fonts
+    fonts:
+      nerd-fonts:
+        - RobotoMono
+        - Mononoki
+        - Overpass
+  - type: signing
