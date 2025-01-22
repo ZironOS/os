@@ -20,6 +20,7 @@ modules:
       - procs
       - ripgrep
       - sd
+      - solaar-udev
       - starship
       - tailscale
       - tealdeer
@@ -32,6 +33,7 @@ modules:
     notify: true
     user: 
       install: 
+        - io.github.pwr_solaar.solaar
         - io.mpv.Mpv
         - it.mijorus.gearlever
         - net.mullvad.MullvadBrowser
