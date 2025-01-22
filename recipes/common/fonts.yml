@@ -3,8 +3,8 @@ modules:
   - type: fonts
     fonts:
       nerd-fonts:
-        - RobotoMono
         - Mononoki
         - Overpass
+        - RobotoMono
   - type: signing
 
