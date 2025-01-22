@@ -1,4 +1,4 @@
-name: bluebuild
+name: Ziron Build 
 on:
   schedule:
     - cron:
@@ -6,15 +6,15 @@ on:
   push:
     paths-ignore:
       - "**.md"
-
   pull_request:
   workflow_dispatch:
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref || github.run_id }}
   cancel-in-progress: true
+
 jobs:
-  bluebuild:
-    name: Build Custom Image
+  ziron-build:
+    name: Build Ziron Image
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -26,12 +26,15 @@ jobs:
         recipe:
           - kinoite.yml 
     steps:
-      - name: Build Custom Image
+      - name: Build and Publish
         uses: blue-build/github-action@v1.8
+        if: github.event_name != 'pull_request'
         with:
           recipe: ${{ matrix.recipe }}
           cosign_private_key: ${{ secrets.SIGNING_SECRET }}
           registry_token: ${{ github.token }}
           pr_event_number: ${{ github.event.number }}
+          rechunk: true
+          build_opts: --compression-format zstd
 
           maximize_build_space: true
