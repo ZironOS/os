@@ -4,6 +4,8 @@ on:
     - cron:
         "00 06 * * *"
   push:
+    branches:
+      - "main"
     paths-ignore:
       - "**.md"
   pull_request:
