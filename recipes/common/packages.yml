@@ -13,6 +13,8 @@ modules:
       - eza
       - fastfetch
       - gh
+      # Required for Piper Support
+      - libratbag-ratbagd
       - libvirt
       - neovim
       - pleaser
