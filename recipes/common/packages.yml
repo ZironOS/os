@@ -8,6 +8,7 @@ modules:
       - alacritty
       - autojump
       - bat
+      # For CPU Monitoring
       - btop
       - elvish
       - eza
@@ -17,6 +18,8 @@ modules:
       - libratbag-ratbagd
       - libvirt
       - neovim
+      # For GPU Monitoring
+      - nvtop
       - pleaser
       - podman-compose
       - procs
