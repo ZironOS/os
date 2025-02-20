@@ -10,6 +10,8 @@ modules:
       - bat
       # For CPU Monitoring
       - btop
+      - docker
+      - docker-compose
       - eza
       - fastfetch
       - fish
