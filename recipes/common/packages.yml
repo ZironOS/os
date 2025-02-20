@@ -10,9 +10,9 @@ modules:
       - bat
       # For CPU Monitoring
       - btop
-      - elvish
       - eza
       - fastfetch
+      - fish
       - gh
       # Required for Piper Support
       - libratbag-ratbagd
