@@ -10,6 +10,7 @@ modules:
       - bat
       # For CPU Monitoring
       - btop
+      - crontabs
       - docker
       - docker-compose
       - eza
