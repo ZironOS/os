@@ -6,6 +6,7 @@ modules:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - alacritty
+      - android-tools
       - autojump
       - bat
       # For CPU Monitoring
