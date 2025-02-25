@@ -27,6 +27,7 @@ modules:
       - pleaser
       - podman-compose
       - procs
+      - rclone
       - ripgrep
       - sd
       - solaar-udev
