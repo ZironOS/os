@@ -18,6 +18,7 @@ modules:
       - fastfetch
       - fish
       - gh
+      - goverlay
       # Required for Piper Support
       - libratbag-ratbagd
       - libvirt
