@@ -19,6 +19,8 @@ modules:
   - type: rpm-ostree
     remove:
       - kwrite
+      - dnf5
+      - dnf5-plugins
   - type: default-flatpaks
     notify: true
     user: 
