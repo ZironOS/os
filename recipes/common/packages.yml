@@ -1,11 +1,4 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
-stages:
-  - name: eza
-    from: docker.io/library/rust
-    modules:
-      - type: script
-        snippets:
-          - "cargo install eza"
 modules:
   - type: copy
     from: eza
@@ -23,6 +16,7 @@ modules:
       # For CPU Monitoring
       - btop
       - crontabs
+      - distrobox
       - fastfetch
       - gh
       - goverlay
