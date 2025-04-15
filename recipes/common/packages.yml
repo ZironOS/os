@@ -1,5 +1,16 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+stages:
+  - name: eza
+    from: docker.io/library/rust
+    modules:
+      - type: script
+        snippets:
+          - "cargo install eza"
 modules:
+  - type: copy
+    from: eza
+    src: /usr/local/cargo/bin/eza
+    dest: /usr/bin/
   - type: rpm-ostree
     repos:
       - https://copr.fedorainfracloud.org/coprs/atim/starship/repo/fedora-%OS_VERSION%/atim-starship-fedora-%OS_VERSION%.repo
@@ -12,11 +23,7 @@ modules:
       # For CPU Monitoring
       - btop
       - crontabs
-      - docker
-      - docker-compose
-      - eza
       - fastfetch
-      - fish
       - gh
       - goverlay
       # Required for Piper Support
@@ -25,12 +32,9 @@ modules:
       - neovim
       # For GPU Monitoring
       - nvtop
-      - pleaser
       - podman-compose
       - procs
-      - rclone
       - ripgrep
-      - sd
       - solaar-udev
       - starship
       - tailscale
