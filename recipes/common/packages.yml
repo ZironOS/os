@@ -26,6 +26,8 @@ modules:
       - neovim
       # For GPU Monitoring
       - nvtop
+      # Generate podman quadlets
+      - podlet
       - podman-compose
       - procs
       - ripgrep
