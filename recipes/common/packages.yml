@@ -20,6 +20,8 @@ modules:
       - fastfetch
       - gh
       - goverlay
+      # For Samsung Devices
+      - heimdall
       # Required for Piper Support
       - libratbag-ratbagd
       - libvirt
