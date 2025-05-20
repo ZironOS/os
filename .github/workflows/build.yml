@@ -27,6 +27,7 @@ jobs:
       matrix:
         recipe:
           - kinoite.yml 
+          - server.yml
     steps:
       - name: Build and Publish
         uses: blue-build/github-action@v1.8
