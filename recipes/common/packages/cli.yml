@@ -26,3 +26,7 @@ modules:
       - tailscale
       - tokei
       - zoxide
+    remove:
+      - default-editor
+      - nano
+      - nano-default-editor
