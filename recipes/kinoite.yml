@@ -2,7 +2,7 @@
 name: kde-atomic
 description: KDE Atomic Edition of ZironOS
 
-base-image: quay.io/fedora-ostree-desktops/kinoite 
+base-image: quay.io/fedora-ostree-desktops/kinoite
 image-version: 42
 
 stages:
@@ -14,8 +14,10 @@ stages:
           - "cargo install eza"
 modules:
   - from-file: common/files.yml
-  - from-file: common/packages.yml
   - from-file: common/fonts.yml
+  - from-file: common/packages/cli.yml
+  - from-file: common/packages/tui.yml
+  - from-file: common/packages/gui.yml
   - type: rpm-ostree
     remove:
       - kwrite
@@ -23,6 +25,6 @@ modules:
       - dnf5-plugins
   - type: default-flatpaks
     notify: true
-    user: 
-      install: 
+    user:
+      install:
         - org.kde.kwrite
