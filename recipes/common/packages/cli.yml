@@ -13,6 +13,7 @@ modules:
       - autojump
       - bat
       - distrobox
+      - duf
       - fastfetch
       - gh
       # For Samsung Devices
