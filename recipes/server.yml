@@ -23,6 +23,11 @@ modules:
   - from-file: common/fonts.yml
   - from-file: common/packages/cli.yml
   - from-file: common/packages/tui.yml
+  - type: rpm-ostree
+    install:
+      - cockpit
+      - openssh-server
+      - fuse-zip
   - type: script
     snippets:
       - ln -s /usr/lib/systemd/system/sshd.service /etc/systemd/system/multi-user.target.wants/sshd.service
