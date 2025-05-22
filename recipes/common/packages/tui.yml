@@ -1,0 +1,10 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+modules:
+  - type: rpm-ostree
+    install:
+      # For CPU Monitoring
+      - btop
+      - neovim
+      # For GPU Monitoring
+      - nvtop
+      - tealdeer
