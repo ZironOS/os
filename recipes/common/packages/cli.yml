@@ -30,3 +30,10 @@ modules:
       - default-editor
       - nano
       - nano-default-editor
+  - type: script
+    snippets:
+      - ln -sf /usr/bin/eza /usr/bin/ls
+      - ln -sf /usr/bin/bat /usr/bin/cat
+      - ln -sf /usr/bin/duf /usr/bin/df
+      - ln -sf /usr/bin/procs /usr/bin/ps
+      - ln -sf /usr/bin/rg /usr/bin/grep
