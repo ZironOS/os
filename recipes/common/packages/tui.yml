@@ -7,4 +7,5 @@ modules:
       - neovim
       # For GPU Monitoring
       - nvtop
+      - poppler
       - tealdeer
