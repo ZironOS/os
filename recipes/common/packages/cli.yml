@@ -17,6 +17,8 @@ modules:
       - gh
       # For Samsung Devices
       - heimdall
+      # Hardware Checking
+      - lshw
       - podman-compose
       - procs
       - ripgrep
