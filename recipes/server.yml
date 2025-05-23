@@ -2,7 +2,7 @@
 name: server
 description: ZironOS Server Atomic Variant
 
-base-image: quay.io/fedora-ostree-desktops/buildroot
+base-image: quay.io/fedora-ostree-desktops/base-atomic
 image-version: 42
 
 stages:
