@@ -11,3 +11,6 @@ modules:
   - from-file: common/packages/tui.yml
   - from-file: common/packages/gui.yml
   - from-file: common/fonts.yml
+  - type: rpm-ostree
+    remove:
+      - cosmic-player
