@@ -26,5 +26,7 @@ modules:
   - from-file: common/packages/gui.yml
   - from-file: common/fonts.yml
   - type: rpm-ostree
+    install:
+      - fuse-sshfs
     remove:
       - cosmic-player
