@@ -1,8 +1,7 @@
-name: Ziron Build 
+name: Ziron Build
 on:
   schedule:
-    - cron:
-        "00 06 * * *"
+    - cron: "00 06 * * *"
   push:
     branches:
       - "main"
@@ -26,7 +25,8 @@ jobs:
       fail-fast: false
       matrix:
         recipe:
-          - kinoite.yml 
+          - cosmic.yml
+          - kinoite.yml
           - server.yml
     steps:
       - name: Build and Publish
