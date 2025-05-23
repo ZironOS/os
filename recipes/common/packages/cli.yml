@@ -28,6 +28,8 @@ modules:
       - zoxide
     remove:
       - default-editor
+      - dnf5
+      - dnf5-plugins
       - nano
       - nano-default-editor
   - type: script
