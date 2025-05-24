@@ -23,6 +23,7 @@ modules:
       - podman-compose
       - procs
       - ripgrep
+      - starship
       - tailscale
       - tokei
       - zoxide
