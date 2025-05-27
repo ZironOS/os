@@ -7,6 +7,7 @@ modules:
       # Required for Piper Support
       - libratbag-ratbagd
       - solaar-udev
+      - waydroid
     remove:
       - firefox
       - firefox-langpacks
