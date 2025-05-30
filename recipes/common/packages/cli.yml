@@ -22,6 +22,8 @@ modules:
       - gh
       # For Samsung Devices
       - heimdall
+      # Required for Controller Support
+      - kernel-modules-extra
       # Hardware Checking
       - lshw
       - podman-compose
