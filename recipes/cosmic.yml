@@ -12,12 +12,6 @@ stages:
       - type: script
         snippets:
           - "cargo install eza"
-  - name: yazi
-    from: docker.io/library/rust
-    modules:
-      - type: script
-        snippets:
-          - "cargo install yazi-fm"
 
 modules:
   - from-file: common/files.yml
