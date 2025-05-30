@@ -30,6 +30,7 @@ modules:
       - starship
       - tailscale
       - tokei
+      - waypipe
       - zoxide
     remove:
       - default-editor
