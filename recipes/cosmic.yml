@@ -15,7 +15,8 @@ stages:
 
 modules:
   - from-file: common/files.yml
-  - from-file: common/packages/cli.yml
+  - from-file: common/packages/cli/base.yml
+  - from-file: common/packages/cli/extra.yml
   - from-file: common/packages/tui.yml
   - from-file: common/packages/gui.yml
   - from-file: common/fonts.yml

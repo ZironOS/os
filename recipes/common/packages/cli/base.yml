@@ -1,0 +1,22 @@
+# yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
+modules:
+  - type: rpm-ostree
+    repos:
+      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
+    install:
+      - autojump
+      - bat
+      - duf
+      - fastfetch
+      # Hardware Checking
+      - lshw
+      - podman-compose
+      - procs
+      - ripgrep
+      - tailscale
+      - waypipe
+      - zoxide
+    remove:
+      - dnf5
+      - nano
+      - nano-default-editor
