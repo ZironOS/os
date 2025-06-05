@@ -23,6 +23,14 @@ modules:
   - from-file: common/fonts.yml
   - from-file: common/packages/cli/base.yml
   - from-file: common/packages/tui.yml
+  - type: copy
+    from: eza
+    src: /usr/local/bin/eza
+    dest: /usr/bin/
+  - type: copy
+    from: yazi
+    src: /usr/local/bin/yazi
+    dest: /usr/bin/
   - type: rpm-ostree
     install:
       - cockpit
