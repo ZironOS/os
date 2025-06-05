@@ -6,29 +6,20 @@ base-image: quay.io/fedora/fedora-coreos
 image-version: stable
 
 stages:
-  - name: eza
+  - name: rust
     from: docker.io/library/rust
     modules:
       - type: script
         snippets:
           - "cargo install eza"
-  - name: yazi
-    from: docker.io/library/rust
-    modules:
-      - type: script
-        snippets:
           - "cargo install yazi-fm"
 modules:
   - from-file: common/files.yml
   - from-file: common/packages/cli/base.yml
   - from-file: common/packages/tui.yml
   - type: copy
-    from: eza
-    src: /usr/local/bin/eza
-    dest: /usr/bin/
-  - type: copy
-    from: yazi
-    src: /usr/local/bin/yazi
+    from: rust
+    src: /usr/local/cargo/bin/*
     dest: /usr/bin/
   - type: rpm-ostree
     install:
