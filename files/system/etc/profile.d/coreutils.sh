@@ -21,10 +21,8 @@ function grep() {
 		/usr/bin/rg -e "$@"
 	elif [ "$1" == "-E"] && [ "$GREP" != "rg" ]; then
 		/usr/bin/grep "$@"
-	elif [ $GREP == "rg" ]; then
-		/usr/bin/rg "$@"
 	else
-		/usr/bin/grep "$@"
+		/usr/bin/$GREP "$@"
 	fi
 }
 
