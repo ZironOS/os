@@ -6,7 +6,7 @@ base-image: quay.io/fedora-ostree-desktops/cosmic-atomic
 image-version: 42
 
 stages:
-  - name: eza
+  - name: rust
     from: docker.io/library/rust
     modules:
       - type: script
@@ -19,6 +19,10 @@ modules:
   - from-file: common/packages/tui.yml
   - from-file: common/packages/gui.yml
   - from-file: common/fonts.yml
+  - type: copy
+    from: rust
+    src: /usr/local/cargo/bin/*
+    dest: /usr/bin/
   - type: rpm-ostree
     install:
       - fuse-sshfs
