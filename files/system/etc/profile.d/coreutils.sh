@@ -7,7 +7,7 @@ function ls() {
 	if command -v eza &>/dev/null; then
 		LS=eza
 	fi
-	$LS "$@"
+	/usr/bin/$LS "$@"
 }
 
 # Check if ripgrep is present if not regular grep is used as fallback
@@ -36,5 +36,5 @@ function cat() {
 		CAT=bat
 	fi
 
-	$CAT "$@"
+	/usr/bin/$CAT "$@"
 }
