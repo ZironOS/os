@@ -4,6 +4,9 @@ modules:
     install:
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-42.noarch.rpm
       - https://mirrors.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-42.noarch.rpm
+  - type: script
+    snippets:
+      - dnf install -y --allowerasing ffmpeg
   - type: rpm-ostree
     repos:
       - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
@@ -20,9 +23,7 @@ modules:
       - tailscale
       - waypipe
       - zoxide
-      - ffmpeg
     remove:
       - dnf5
       - nano
       - nano-default-editor
-      - ffmpeg-free
