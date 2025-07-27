@@ -24,6 +24,8 @@ modules:
   - type: rpm-ostree
     install:
       - cockpit
+      - cockpit-podman
+      - cockpit-storaged
       - fuse-zip
   - type: systemd
     system:
