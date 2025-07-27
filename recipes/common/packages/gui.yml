@@ -12,14 +12,15 @@ modules:
       - firefox
       - firefox-langpacks
   - type: default-flatpaks
-    notify: true
-    user:
-      install:
-        - io.github.pwr_solaar.solaar
-        - io.mpv.Mpv
-        - it.mijorus.gearlever
-        - net.mullvad.MullvadBrowser
-        - one.ablaze.floorp
-        - org.kde.gwenview
-        - org.kde.haruna
-        - org.kde.okular
+    configurations:
+      - scope: user
+        notify: true
+        install:
+          - io.github.pwr_solaar.solaar
+          - io.mpv.Mpv
+          - it.mijorus.gearlever
+          - net.mullvad.MullvadBrowser
+          - one.ablaze.floorp
+          - org.kde.gwenview
+          - org.kde.haruna
+          - org.kde.okular

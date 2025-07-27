@@ -6,7 +6,7 @@ base-image: quay.io/fedora-ostree-desktops/kinoite
 image-version: 42
 
 stages:
-  - name: rust 
+  - name: rust
     from: docker.io/library/rust
     modules:
       - type: script
@@ -27,7 +27,8 @@ modules:
     remove:
       - kwrite
   - type: default-flatpaks
-    notify: true
-    user:
-      install:
-        - org.kde.kwrite
+    configurations:
+      - scope: user
+        notify: true
+        install:
+          - org.kde.kwrite
