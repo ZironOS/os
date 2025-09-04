@@ -30,7 +30,7 @@ jobs:
           - kinoite.yml
     steps:
       - name: Build and Publish
-        uses: blue-build/github-action@v1.8
+        uses: blue-build/github-action@v1.9
         if: github.event_name != 'pull_request'
         with:
           recipe: ${{ matrix.recipe }}
