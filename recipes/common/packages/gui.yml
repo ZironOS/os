@@ -6,6 +6,7 @@ modules:
       - goverlay
       # Required for Piper Support
       - libratbag-ratbagd
+      - pipewire-codec-aptx
       - solaar-udev
       - waydroid
     remove:
