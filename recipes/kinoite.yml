@@ -24,6 +24,8 @@ modules:
     src: /usr/local/cargo/bin/*
     dest: /usr/bin/
   - type: rpm-ostree
+    install:
+      - ksshaskpass
     remove:
       - kwrite
   - type: default-flatpaks
