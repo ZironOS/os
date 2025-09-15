@@ -17,11 +17,11 @@ modules:
       - scope: user
         notify: true
         install:
+          - com.brave.Browser
           - io.github.pwr_solaar.solaar
           - io.mpv.Mpv
           - it.mijorus.gearlever
-          - net.mullvad.MullvadBrowser
-          - one.ablaze.floorp
           - org.kde.gwenview
           - org.kde.haruna
           - org.kde.okular
+          - org.mozilla.firefox
