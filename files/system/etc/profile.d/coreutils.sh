@@ -1,13 +1,20 @@
 # Core Utils QoL Improvements
+function exec_fallback {
+	local default="$2"
+
+	if command -v $1 &>/dev/null
+	then
+		default="$1"
+	fi
+
+	shift 2
+
+	$default $@
+}
 
 # Check if eza is present if not fallback to ls
 function ls() {
-	local LS="ls"
-
-	if command -v eza &>/dev/null; then
-		LS=eza
-	fi
-	/usr/bin/$LS "$@"
+	exec_fallback eza ls $@
 }
 
 # Check if ripgrep is present if not regular grep is used as fallback
@@ -28,11 +35,5 @@ function grep() {
 
 # Check if bat is present and if not uses cat as fallback
 function cat() {
-	local CAT="cat"
-
-	if command -v bat &>/dev/null; then
-		CAT=bat
-	fi
-
-	/usr/bin/$CAT "$@"
+	exec_fallback bat cat $@
 }
