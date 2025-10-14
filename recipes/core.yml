@@ -26,6 +26,8 @@ modules:
       - cockpit
       - cockpit-podman
       - cockpit-storaged
+      - docker
+      - docker-compose
       - fuse-zip
   - type: systemd
     system:
