@@ -1,5 +1,10 @@
 # yaml-language-server: $schema=https://schema.blue-build.org/recipe-v1.json
 modules:
+  - type: script
+    snippets:
+      - "curl -o /tmp/tailscale.install https://tailscale.com/install.sh"
+      - "chmod +x /tmp/tailscale.install"
+      - "/tmp/tailscale.install"
   - type: rpm-ostree
     install:
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
@@ -8,8 +13,6 @@ modules:
     snippets:
       - dnf install -y --allowerasing ffmpeg
   - type: rpm-ostree
-    repos:
-      - https://pkgs.tailscale.com/stable/fedora/tailscale.repo
     install:
       - autojump
       - bat
@@ -20,7 +23,6 @@ modules:
       - podman-compose
       - procs
       - ripgrep
-      - tailscale
       - waypipe
       - zoxide
     remove:
