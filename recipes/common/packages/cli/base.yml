@@ -4,6 +4,7 @@ modules:
     snippets:
       - "curl -o /tmp/tailscale.install https://tailscale.com/install.sh"
       - "chmod +x /tmp/tailscale.install"
+      - "sed -i 's/systemctl enable --now tailscaled//' /tmp/tailscale.install"
       - "/tmp/tailscale.install"
   - type: rpm-ostree
     install:
