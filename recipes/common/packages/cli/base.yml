@@ -26,6 +26,5 @@ modules:
       - waypipe
       - zoxide
     remove:
-      - dnf5
       - nano
       - nano-default-editor
