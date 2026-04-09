@@ -2,10 +2,7 @@
 modules:
   - type: script
     snippets:
-      - "curl -o /tmp/tailscale.install https://tailscale.com/install.sh"
-      - "chmod +x /tmp/tailscale.install"
-      - "sed -i 's/systemctl enable --now tailscaled//' /tmp/tailscale.install"
-      - "/tmp/tailscale.install"
+      - "curl -o /etc/yum.repos.d/tailscale.repo https://pkgs.tailscale.com/stable/fedora/tailscale.repo"
   - type: rpm-ostree
     install:
       - https://mirrors.rpmfusion.org/free/fedora/rpmfusion-free-release-%OS_VERSION%.noarch.rpm
