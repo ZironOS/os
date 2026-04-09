@@ -21,6 +21,7 @@ modules:
       - podman-compose
       - procs
       - ripgrep
+      - tailscale
       - waypipe
       - zoxide
     remove:
