@@ -26,8 +26,6 @@ jobs:
       matrix:
         recipe:
           - core.yml
-          - cosmic.yml
-          - kinoite.yml
     steps:
       - name: Build and Publish
         uses: blue-build/github-action@v1.9
